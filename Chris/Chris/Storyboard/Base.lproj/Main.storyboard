@@ -114,7 +114,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="letsPlayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7B7-FK-oKX"/>
-                                                    <segue destination="1n8-SW-Fan" kind="modal" identifier="toGameboardVC" modalPresentationStyle="fullScreen" id="5Y3-Jn-ABD"/>
+                                                    <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" modalPresentationStyle="fullScreen" id="5Y3-Jn-ABD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -161,7 +161,9 @@
         <!--GameBoard-->
         <scene sceneID="cTi-Qd-ENK">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LJk-La-ug5"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGg-Lf-O9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="540"/>

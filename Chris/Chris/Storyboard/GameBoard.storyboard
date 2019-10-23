@@ -75,7 +75,7 @@
                                     <constraint firstAttribute="width" secondItem="iDi-Iw-yho" secondAttribute="height" multiplier="1:1" id="Sv0-Bg-Baw"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-QC-lDe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAw-QC-lDe">
                                 <rect key="frame" x="174.66666666666666" y="88" width="64.666666666666657" height="41.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FAw-QC-lDe" secondAttribute="height" multiplier="554:356" id="hOe-dW-Ehw"/>
@@ -247,7 +247,7 @@
                         <outlet property="gameButtonThree" destination="lkQ-7d-5fi" id="luZ-ML-MD6"/>
                         <outlet property="gameButtonTwo" destination="fQ0-7I-n3d" id="G1n-jm-1aF"/>
                         <outlet property="newPlayersButton" destination="snh-Ad-BgW" id="r1c-Pf-UBJ"/>
-                        <outlet property="playerAgainButton" destination="Drk-bG-9e6" id="8bt-yX-lXZ"/>
+                        <outlet property="playAgainButton" destination="Drk-bG-9e6" id="8bt-yX-lXZ"/>
                         <outlet property="playerOneLabel" destination="Lfj-qx-X0G" id="mDE-do-AWl"/>
                         <outlet property="playerOneScore" destination="9iF-EK-zNL" id="kYX-0l-DgP"/>
                         <outlet property="playerTwoLabel" destination="odj-oa-Xjf" id="ZqP-NY-BAb"/>
@@ -262,7 +262,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LeftArrow" width="554" height="356"/>
         <image name="boardBlack" width="320" height="320"/>
         <image name="circle" width="1200" height="1200"/>
         <image name="cross" width="1200" height="1200"/>
