@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +105,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1n8-SW-Fan" kind="show" id="5Y3-Jn-ABD"/>
+                                                    <segue destination="zDV-fC-aag" kind="show" id="5Y3-Jn-ABD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -134,21 +134,28 @@
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="95.758928571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Kxx-Qg-Sv1">
+            <objects>
+                <viewController id="zDV-fC-aag" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Lx-ma-47g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="J5o-Hq-Mhj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rRE-d9-tXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="825"/>
+        </scene>
         <!--Scoreboard-->
         <scene sceneID="7MI-Pf-mzs">
             <objects>
                 <viewControllerPlaceholder storyboardName="Scoreboard" id="9UG-Qr-7Bp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJY-Ys-XaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="540"/>
-        </scene>
-        <!--GameBoard-->
-        <scene sceneID="cTi-Qd-ENK">
-            <objects>
-                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gGg-Lf-O9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="979" y="540"/>
+            <point key="canvasLocation" x="401" y="825"/>
         </scene>
     </scenes>
     <resources>
