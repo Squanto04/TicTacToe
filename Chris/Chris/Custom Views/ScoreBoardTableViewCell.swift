@@ -10,6 +10,12 @@ import UIKit
 
 class ScoreBoardTableViewCell: UITableViewCell {
     
+    var score: Score? {
+        didSet {
+            setUpViews()
+        }
+    }
+    
     @IBOutlet weak var playerOneLabel: UILabel!
     @IBOutlet weak var playerTwoLabel: UILabel!
     
