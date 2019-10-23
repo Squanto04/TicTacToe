@@ -15,6 +15,12 @@
 		35EF559F2360BDFB00649AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF559D2360BDFB00649AE2 /* Main.storyboard */; };
 		35EF55A12360BDFD00649AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55A02360BDFD00649AE2 /* Assets.xcassets */; };
 		35EF55A42360BDFD00649AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55A22360BDFD00649AE2 /* LaunchScreen.storyboard */; };
+		35EF55B22360D13000649AE2 /* Scoreboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55B02360D13000649AE2 /* Scoreboard.storyboard */; };
+		35EF55B42360D14300649AE2 /* GameBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55B32360D14300649AE2 /* GameBoard.storyboard */; };
+		35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */; };
+		35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B72360D24800649AE2 /* GameBoardViewController.swift */; };
+		35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */; };
+		35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55BD2360D33D00649AE2 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		35EF55A02360BDFD00649AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35EF55A32360BDFD00649AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35EF55A52360BDFD00649AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35EF55B12360D13000649AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Chris/Storyboard/Base.lproj/Scoreboard.storyboard; sourceTree = "<group>"; };
+		35EF55B32360D14300649AE2 /* GameBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameBoard.storyboard; sourceTree = "<group>"; };
+		35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		35EF55B72360D24800649AE2 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
+		35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewController.swift; sourceTree = "<group>"; };
+		35EF55BD2360D33D00649AE2 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,8 @@
 				35EF55AE2360BE3300649AE2 /* Model Controllers */,
 				35EF55AF2360BE4700649AE2 /* View Controllers */,
 				35EF55AC2360BE1E00649AE2 /* Storyboard */,
+				35EF55BB2360D30C00649AE2 /* Custom Views */,
+				35EF55BC2360D31C00649AE2 /* Extensions */,
 				35EF55AB2360BE0C00649AE2 /* Resources */,
 			);
 			path = Chris;
@@ -84,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				35EF559D2360BDFB00649AE2 /* Main.storyboard */,
+				35EF55B32360D14300649AE2 /* GameBoard.storyboard */,
+				35EF55B02360D13000649AE2 /* Scoreboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -109,8 +125,26 @@
 		35EF55AF2360BE4700649AE2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */,
+				35EF55B72360D24800649AE2 /* GameBoardViewController.swift */,
+				35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		35EF55BB2360D30C00649AE2 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		35EF55BC2360D31C00649AE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35EF55BD2360D33D00649AE2 /* DateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +205,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EF55B22360D13000649AE2 /* Scoreboard.storyboard in Resources */,
 				35EF55A42360BDFD00649AE2 /* LaunchScreen.storyboard in Resources */,
 				35EF55A12360BDFD00649AE2 /* Assets.xcassets in Resources */,
+				35EF55B42360D14300649AE2 /* GameBoard.storyboard in Resources */,
 				35EF559F2360BDFB00649AE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +223,10 @@
 				28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */,
 				28CBEFCF2360C5A8005A8AFC /* Player.swift in Sources */,
 				35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */,
+				35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */,
+				35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */,
+				35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */,
+				35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */,
 				28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */,
 				28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */,
 			);
@@ -209,6 +249,14 @@
 				35EF55A32360BDFD00649AE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		35EF55B02360D13000649AE2 /* Scoreboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35EF55B12360D13000649AE2 /* Base */,
+			);
+			name = Scoreboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
