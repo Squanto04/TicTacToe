@@ -13,6 +13,7 @@ class PlayerController {
     static let shared = PlayerController()
     
     var players: [Player] = []
+    var nightMode: Bool = false
     
     func createPlayer(name: String, icon: Bool) {
         let newPlayer = Player(name: name, icon: icon)

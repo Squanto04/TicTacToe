@@ -236,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="endGameButton" destination="wJy-t1-Esc" id="hjW-jC-n5S"/>
+                        <outlet property="gameBoardImageView" destination="iDi-Iw-yho" id="6kY-t0-dlU"/>
                         <outlet property="gameButtonEight" destination="gKz-oN-6bd" id="JZg-Ql-uiN"/>
                         <outlet property="gameButtonFive" destination="2Ut-7g-gf3" id="Nft-pq-J4g"/>
                         <outlet property="gameButtonFour" destination="NHh-mn-HhP" id="OWu-Gy-R8p"/>
@@ -248,7 +249,9 @@
                         <outlet property="newPlayersButton" destination="snh-Ad-BgW" id="r1c-Pf-UBJ"/>
                         <outlet property="playerAgainButton" destination="Drk-bG-9e6" id="8bt-yX-lXZ"/>
                         <outlet property="playerOneLabel" destination="Lfj-qx-X0G" id="mDE-do-AWl"/>
+                        <outlet property="playerOneScore" destination="9iF-EK-zNL" id="kYX-0l-DgP"/>
                         <outlet property="playerTwoLabel" destination="odj-oa-Xjf" id="ZqP-NY-BAb"/>
+                        <outlet property="playerTwoScore" destination="gYM-E1-QzO" id="yp5-w6-p0l"/>
                         <outlet property="playerWonLabel" destination="1mg-12-KOf" id="dlJ-jb-KLz"/>
                         <outlet property="turnPickerImageView" destination="FAw-QC-lDe" id="4pp-Ax-XPB"/>
                     </connections>
