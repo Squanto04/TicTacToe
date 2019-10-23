@@ -9,8 +9,6 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController, UITextFieldDelegate {
-    
-    var nightMode = false
 
     // MARK: - Outlet
     @IBOutlet weak var playerOneTextField: UITextField!
@@ -26,12 +24,12 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func nightModeSwitchTapped(_ sender: Any) {
-        if nightMode == false {
+        if PlayerController.shared.nightMode == false {
             turnNightModeOn()
-            nightMode = true
+            PlayerController.shared.nightMode = true
         } else {
             turnNightModeOff()
-            nightMode = false
+            PlayerController.shared.nightMode = false
         }
     }
     
