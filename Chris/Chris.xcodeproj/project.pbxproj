@@ -21,6 +21,7 @@
 		35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B72360D24800649AE2 /* GameBoardViewController.swift */; };
 		35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */; };
 		35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55BD2360D33D00649AE2 /* DateExtension.swift */; };
+		35EF55C02360DD2200649AE2 /* TicTacToeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55BF2360DD2200649AE2 /* TicTacToeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		35EF55B72360D24800649AE2 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewController.swift; sourceTree = "<group>"; };
 		35EF55BD2360D33D00649AE2 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		35EF55BF2360DD2200649AE2 /* TicTacToeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		35EF55BB2360D30C00649AE2 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				35EF55BF2360DD2200649AE2 /* TicTacToeButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */,
 				35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */,
 				28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */,
+				35EF55C02360DD2200649AE2 /* TicTacToeButton.swift in Sources */,
 				28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
