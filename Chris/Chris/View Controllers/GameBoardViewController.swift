@@ -48,6 +48,7 @@ class GameBoardViewController: UIViewController {
     }
     
     @IBAction func endGameButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func playAgainButtonTapped(_ sender: Any) {

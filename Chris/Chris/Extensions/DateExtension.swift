@@ -13,8 +13,16 @@ extension Date {
     func dateAsString() -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
-        formatter.timeStyle = .short
+        formatter.timeStyle = .none
         
         return formatter.string(from: self)
     }
+    
+    func timeAsString() -> String {
+           let formatter = DateFormatter()
+           formatter.dateStyle = .none
+           formatter.timeStyle = .short
+           
+           return formatter.string(from: self)
+       }
 }

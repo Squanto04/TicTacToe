@@ -112,7 +112,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="letsPlayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7B7-FK-oKX"/>
-                                                    <segue destination="1n8-SW-Fan" kind="show" identifier="toGameboardVC" id="5Y3-Jn-ABD"/>
+                                                    <segue destination="1n8-SW-Fan" kind="modal" identifier="toGameboardVC" modalPresentationStyle="fullScreen" id="5Y3-Jn-ABD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
