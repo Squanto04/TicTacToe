@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="Chris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="HYf-sJ-8XF"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -60,6 +63,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="tXm-6F-ik5"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -74,8 +80,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-41-as4">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0hd-41-as4">
                                                 <rect key="frame" x="151" y="0.0" width="51" height="25.333333333333332"/>
+                                                <connections>
+                                                    <action selector="nightModeSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="N6n-0e-AjL"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -86,7 +95,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="9Qa-dp-Fuf" userLabel="Button Stack View">
                                         <rect key="frame" x="41.333333333333343" y="741" width="331.33333333333326" height="55"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Bh-RFD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-Bh-RFD" customClass="TicTacToeButton" customModule="Chris" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -94,10 +103,11 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="9UG-Qr-7Bp" kind="show" id="4Lw-1s-NIt"/>
+                                                    <action selector="scoreBoardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VkB-aF-13M"/>
+                                                    <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="4Lw-1s-NIt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-SX-yhw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-SX-yhw" customClass="TicTacToeButton" customModule="Chris" customModuleProvider="target">
                                                 <rect key="frame" x="185.66666666666669" y="0.0" width="145.66666666666669" height="55"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -105,7 +115,8 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1n8-SW-Fan" kind="show" id="5Y3-Jn-ABD"/>
+                                                    <action selector="letsPlayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7B7-FK-oKX"/>
+                                                    <segue destination="1n8-SW-Fan" kind="show" identifier="toGameboardVC" id="5Y3-Jn-ABD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -118,7 +129,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bm1-Bt-0gn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G20-hO-9zw"/>
                             <constraint firstItem="SXN-Sx-sXJ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="MQ1-bC-pwY"/>
@@ -129,6 +140,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="mOX-Nn-MlY"/>
+                    <connections>
+                        <outlet property="letsPlayButton" destination="QZD-SX-yhw" id="wyr-nF-Qps"/>
+                        <outlet property="nightModeLabel" destination="SaZ-hZ-8Jw" id="Qwn-dK-xqn"/>
+                        <outlet property="playerOneTextField" destination="ELA-KM-vPV" id="Szu-8M-Lyx"/>
+                        <outlet property="playerTwoTextField" destination="Rrm-03-lgo" id="vVK-p0-tMA"/>
+                        <outlet property="scoreBoardButton" destination="Gyj-Bh-RFD" id="T6c-DR-lrp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

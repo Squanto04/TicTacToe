@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game Board View Controller-->
         <scene sceneID="Kxx-Qg-Sv1">
             <objects>
-                <viewController id="zDV-fC-aag" sceneMemberID="viewController">
+                <viewController id="zDV-fC-aag" customClass="GameBoardViewController" customModule="Chris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Lx-ma-47g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
