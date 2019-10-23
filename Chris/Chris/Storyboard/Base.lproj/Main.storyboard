@@ -159,7 +159,9 @@
         <!--GameBoard-->
         <scene sceneID="cTi-Qd-ENK">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LJk-La-ug5"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGg-Lf-O9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="979" y="540"/>

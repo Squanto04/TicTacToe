@@ -11,10 +11,10 @@ import UIKit
 class GameBoardViewController: UIViewController {
     
     // MARK: - Properties
-    var ActivePlayer = Int.random(in: 1 ..< 3)
-    var GameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    let WinningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-    var GameIsActive = true
+    var activePlayer = Int.random(in: 1 ..< 3)
+    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    var gameIsActive = true
     var playerOneTurn: UIImage!
     var playerTwoTurn: UIImage!
 
@@ -31,7 +31,7 @@ class GameBoardViewController: UIViewController {
     // Buttons
     @IBOutlet weak var newPlayersButton: TicTacToeButton!
     @IBOutlet weak var endGameButton: TicTacToeButton!
-    @IBOutlet weak var playerAgainButton: TicTacToeButton!
+    @IBOutlet weak var playAgainButton: TicTacToeButton!
     // Game Buttons
     @IBOutlet weak var gameButtonOne: UIButton!
     @IBOutlet weak var gameButtonTwo: UIButton!
@@ -51,9 +51,62 @@ class GameBoardViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func gameButtonTapped(_ sender: AnyObject) {
+        if (gameState[sender.tag - 1] == 0 && gameIsActive == true) {
+            gameState[sender.tag - 1] = activePlayer
+            if activePlayer == 1 {
+                sender.setImage(UIImage(named: "cross.png"), for: UIControl.State())
+                activePlayer = 2
+                turnPickerImageView.image = playerTwoTurn
+            } else {
+                sender.setImage(UIImage(named: "circle.png"), for: UIControl.State())
+                activePlayer = 1
+                turnPickerImageView.image = playerOneTurn
+            }
+        }
+        
+        for combination in winningCombinations {
+            if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
+                gameIsActive = false
+                if gameState[combination[0]] == 1 {
+                    playerWonLabel.text = "\(PlayerController.shared.players[0].name) has Won!"
+                } else {
+                    playerWonLabel.text = "\(PlayerController.shared.players[1].name) has Won!"
+                }
+                
+                playAgainButton.isHidden = false
+                playerWonLabel.isHidden = false
+                newPlayersButton.isHidden = false
+                endGameButton.isHidden = true
+                self.disableGameButtons()
+            }
+        }
+        
+        var count = 1
+        if gameIsActive == true {
+            for i in gameState {
+                count = i*count
+                if count != 0 {
+                    playerWonLabel.text = "It was a draw!"
+                    playAgainButton.isHidden = false
+                    playerWonLabel.isHidden = false
+                    newPlayersButton.isHidden = false
+                    endGameButton.isHidden = true
+                }
+            }
+        }
     }
     
     @IBAction func newPlayersButtonTapped(_ sender: Any) {
+        addPlayersScore()
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        activePlayer = Int.random(in: 1..<3)
+        enableGameButtons()
+        playAgainButton.isHidden = true
+        playerWonLabel.isHidden = true
+        newPlayersButton.isHidden = true
+        endGameButton.isHidden = false
+        PlayerController.shared.players = []
+        self.dismiss(animated: true)
     }
     
     @IBAction func endGameButtonTapped(_ sender: Any) {
@@ -64,6 +117,40 @@ class GameBoardViewController: UIViewController {
     }
     
     // MARK: - Helper Functions
+    func addPlayersScore() {
+        guard let playerOneScore = Int(playerOneScore.text!),
+            let playerTwoScore = Int(playerTwoScore.text!)
+            else { return }
+        let playerOne = PlayerController.shared.players[0]
+        ScoreController.sharedScore.setScore(score: playerOneScore, player: playerOne)
+        let playerTwo = PlayerController.shared.players[1]
+        ScoreController.sharedScore.setScore(score: playerTwoScore, player: playerTwo)
+    }
+    
+    func disableGameButtons() {
+        gameButtonOne.isEnabled = false
+        gameButtonTwo.isEnabled = false
+        gameButtonThree.isEnabled = false
+        gameButtonFour.isEnabled = false
+        gameButtonFive.isEnabled = false
+        gameButtonSix.isEnabled = false
+        gameButtonSeven.isEnabled = false
+        gameButtonEight.isEnabled = false
+        gameButtonNine.isEnabled = false
+    }
+    
+    func enableGameButtons() {
+        gameButtonOne.isEnabled = true
+        gameButtonTwo.isEnabled = true
+        gameButtonThree.isEnabled = true
+        gameButtonFour.isEnabled = true
+        gameButtonFive.isEnabled = true
+        gameButtonSix.isEnabled = true
+        gameButtonSeven.isEnabled = true
+        gameButtonEight.isEnabled = true
+        gameButtonNine.isEnabled = true
+    }
+    
     func updateViews() {
         playerOneLabel.text = PlayerController.shared.players[0].name
         playerTwoLabel.text = PlayerController.shared.players[1].name
