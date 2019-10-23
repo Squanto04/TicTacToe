@@ -40,6 +40,14 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func letsPlayButtonTapped(_ sender: Any) {
+        guard let playerOne = playerOneTextField.text,
+            !playerOne.isEmpty,
+            let playerTwo = playerTwoTextField.text,
+            !playerTwo.isEmpty
+            else { return }
+        PlayerController.shared.createPlayer(name: playerOne, icon: true)
+        PlayerController.shared.createPlayer(name: playerTwo, icon: false)
+        
         performSegue(withIdentifier: "toGameboardVC", sender: self)
     }
     
@@ -52,11 +60,6 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     func turnNightModeOff() {
         self.view.backgroundColor = .white
         nightModeLabel.textColor = .black
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
     }
 
 }
