@@ -9,17 +9,19 @@
 import UIKit
 
 class ScoreboardTableViewController: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func homeButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return ScoreController.sharedScore.scores.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

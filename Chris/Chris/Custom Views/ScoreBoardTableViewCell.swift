@@ -9,16 +9,29 @@
 import UIKit
 
 class ScoreBoardTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var playerOneLabel: UILabel!
+    @IBOutlet weak var playerTwoLabel: UILabel!
+    
+    @IBOutlet weak var scoreForPlayerOne: UILabel!
+    @IBOutlet weak var scoreForPlayerTwo: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    func setUpViews() {
+        playerOneLabel.text = PlayerController.shared.players[0].name
+        playerTwoLabel.text = PlayerController.shared.players[1].name
+        
+        scoreForPlayerOne.text = "\(ScoreController.sharedScore.scores[0].score)"
+        scoreForPlayerTwo.text = "\(ScoreController.sharedScore.scores[1].score)"
+        
+        timeLabel.text = ScoreController.sharedScore.scores[0].timestamp.timeAsString()
+        dateLabel.text = ScoreController.sharedScore.scores[0].timestamp.dateAsString()
     }
-
 }

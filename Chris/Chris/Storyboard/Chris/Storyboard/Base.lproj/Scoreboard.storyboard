@@ -7,6 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="IFb-Ae-48e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="RIg-Ex-5EZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kSr-f7-L8Q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rM-T6-tXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="536"/>
+        </scene>
         <!--Scoreboard Table View Controller-->
         <scene sceneID="8Iz-Z1-BtI">
             <objects>
@@ -150,6 +160,9 @@
                             <outlet property="delegate" destination="9wV-gC-CmA" id="jWz-R9-qsz"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="RIg-Ex-5EZ" kind="show" identifier="toMainVCFromSB" id="DW1-hA-JhC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsw-Pa-Io6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
