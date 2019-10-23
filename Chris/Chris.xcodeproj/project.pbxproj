@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28CBEFCF2360C5A8005A8AFC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFCE2360C5A8005A8AFC /* Player.swift */; };
+		28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD02360C7AF005A8AFC /* PlayerController.swift */; };
+		28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD22360C7C5005A8AFC /* Score.swift */; };
+		28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD62360C82E005A8AFC /* ScoreController.swift */; };
 		35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55992360BDFB00649AE2 /* AppDelegate.swift */; };
 		35EF559F2360BDFB00649AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF559D2360BDFB00649AE2 /* Main.storyboard */; };
 		35EF55A12360BDFD00649AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55A02360BDFD00649AE2 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28CBEFCE2360C5A8005A8AFC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		28CBEFD02360C7AF005A8AFC /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerController.swift; path = "Chris/Model Controllers/PlayerController.swift"; sourceTree = SOURCE_ROOT; };
+		28CBEFD22360C7C5005A8AFC /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		28CBEFD62360C82E005A8AFC /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
 		35EF55962360BDFB00649AE2 /* Chris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EF55992360BDFB00649AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35EF559E2360BDFB00649AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 		35EF55AD2360BE2700649AE2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28CBEFCE2360C5A8005A8AFC /* Player.swift */,
+				28CBEFD22360C7C5005A8AFC /* Score.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +116,8 @@
 		35EF55AE2360BE3300649AE2 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28CBEFD02360C7AF005A8AFC /* PlayerController.swift */,
+				28CBEFD62360C82E005A8AFC /* ScoreController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -208,11 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */,
+				28CBEFCF2360C5A8005A8AFC /* Player.swift in Sources */,
 				35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */,
 				35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */,
 				35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */,
 				35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */,
 				35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */,
+				28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */,
+				28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +383,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EANQJ7L949;
+				DEVELOPMENT_TEAM = 5XC6N4RBRH;
 				INFOPLIST_FILE = "$(SRCROOT)/Chris/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,8 +402,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EANQJ7L949;
+				DEVELOPMENT_TEAM = 5XC6N4RBRH;
 				INFOPLIST_FILE = "$(SRCROOT)/Chris/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
