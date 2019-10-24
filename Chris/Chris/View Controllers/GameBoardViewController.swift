@@ -17,7 +17,9 @@ class GameBoardViewController: UIViewController {
     var gameIsActive = true
     var playerOneTurn: UIImage!
     var playerTwoTurn: UIImage!
-
+    var playerOneTempScore = 0
+    var playerTwoTempScore = 0
+    
     // MARK: - Outlets
     // Labels
     @IBOutlet weak var playerOneLabel: UILabel!
@@ -51,7 +53,7 @@ class GameBoardViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func gameButtonTapped(_ sender: AnyObject) {
-        if (gameState[sender.tag - 1] == 0 && gameIsActive == true) {
+        if gameState[sender.tag - 1] == 0 && gameIsActive == true {
             gameState[sender.tag - 1] = activePlayer
             if activePlayer == 1 {
                 sender.setImage(UIImage(named: "cross.png"), for: .normal)
@@ -69,8 +71,12 @@ class GameBoardViewController: UIViewController {
                 gameIsActive = false
                 if gameState[combination[0]] == 1 {
                     playerWonLabel.text = "\(PlayerController.shared.players[0].name) has Won!"
+                    playerOneTempScore += 1
+                    playerOneScore.text = String(playerOneTempScore)
                 } else {
                     playerWonLabel.text = "\(PlayerController.shared.players[1].name) has Won!"
+                    playerTwoTempScore += 1
+                    playerTwoScore.text = String(playerTwoTempScore)
                 }
                 
                 playAgainButton.isHidden = false
@@ -85,24 +91,26 @@ class GameBoardViewController: UIViewController {
         if gameIsActive == true {
             for i in gameState {
                 count = i*count
-                if count != 0 {
-                    playerWonLabel.text = "It was a draw!"
-                    playAgainButton.isHidden = false
-                    playerWonLabel.isHidden = false
-                    newPlayersButton.isHidden = false
-                    endGameButton.isHidden = true
-                }
+            }
+            if count != 0 {
+                playerWonLabel.text = "It was a draw!"
+                playAgainButton.isHidden = false
+                playerWonLabel.isHidden = false
+                newPlayersButton.isHidden = false
+                endGameButton.isHidden = true
             }
         }
     }
     
     @IBAction func newPlayersButtonTapped(_ sender: Any) {
+        addPlayersScore()
         resetBoard()
         PlayerController.shared.players = []
         self.dismiss(animated: true)
     }
     
     @IBAction func endGameButtonTapped(_ sender: Any) {
+        addPlayersScore()
         PlayerController.shared.players = []
         dismiss(animated: true, completion: nil)
     }
@@ -110,6 +118,12 @@ class GameBoardViewController: UIViewController {
     @IBAction func playAgainButtonTapped(_ sender: Any) {
         resetBoard()
         gameIsActive = true
+        
+        if activePlayer == 1 {
+            self.turnPickerImageView.image = playerOneTurn
+        } else {
+            self.turnPickerImageView.image = playerTwoTurn
+        }
     }
     
     // MARK: - Helper Functions
@@ -174,6 +188,12 @@ class GameBoardViewController: UIViewController {
             self.playerTwoLabel.textColor = .black
             self.playerTwoScore.textColor = .black
             self.playerWonLabel.textColor = .black
+            
+            if activePlayer == 1 {
+                self.turnPickerImageView.image = playerOneTurn
+            } else {
+                self.turnPickerImageView.image = playerTwoTurn
+            }
         } else {
             self.view.backgroundColor = .black
             self.gameBoardImageView.image = UIImage(named: "boardWhite")
@@ -184,6 +204,12 @@ class GameBoardViewController: UIViewController {
             self.playerTwoLabel.textColor = .white
             self.playerTwoScore.textColor = .white
             self.playerWonLabel.textColor = .white
+            
+            if activePlayer == 1 {
+                self.turnPickerImageView.image = playerOneTurn
+            } else {
+                self.turnPickerImageView.image = playerTwoTurn
+            }
         }
     }
     

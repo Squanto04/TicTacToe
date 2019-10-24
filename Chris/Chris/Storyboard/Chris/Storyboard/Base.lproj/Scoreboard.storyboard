@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9wV-gC-CmA">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9wV-gC-CmA">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +45,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="dov-o9-ShZ" firstAttribute="centerX" secondItem="Ald-SW-Yx6" secondAttribute="centerX" id="0vc-yo-TKx"/>
                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="m48-ld-z8Z" secondAttribute="trailing" constant="353" id="6M6-cE-Frq"/>
@@ -53,15 +55,15 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreboardCell" rowHeight="150" id="qLq-U4-ijc" customClass="ScoreBoardTableViewCell" customModule="Chris" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="scoreboardCell" rowHeight="150" id="qLq-U4-ijc" customClass="ScoreBoardTableViewCell" customModule="Chris" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qLq-U4-ijc" id="iaK-bl-zmY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-RS-mdm" userLabel="iconVerticalStack">
-                                            <rect key="frame" x="20.666666666666668" y="15" width="41.333333333333329" height="120"/>
+                                            <rect key="frame" x="20.666666666666668" y="15.000000000000007" width="41.333333333333329" height="119.66666666666669"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="uap-Ut-cuu">
                                                     <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="56"/>
@@ -70,7 +72,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="Ynn-VE-6WF">
-                                                    <rect key="frame" x="0.0" y="64" width="41.333333333333336" height="56"/>
+                                                    <rect key="frame" x="0.0" y="64" width="41.333333333333336" height="55.666666666666657"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Ynn-VE-6WF" secondAttribute="height" multiplier="1:1" id="vPh-4t-sbQ"/>
                                                     </constraints>
@@ -78,7 +80,7 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="sVb-ZA-jRb" userLabel="playerEndScoreTimeStack">
-                                            <rect key="frame" x="82.666666666666657" y="0.0" width="331.33333333333337" height="150"/>
+                                            <rect key="frame" x="82.666666666666657" y="0.0" width="331.33333333333337" height="149.66666666666666"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-CD-oLe" userLabel="playerVerticalStack">
                                                     <rect key="frame" x="0.0" y="32.666666666666664" width="72.666666666666671" height="84.666666666666686"/>
