@@ -29,7 +29,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TicTacToeTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="CMz-4c-8AD">
-                                                <rect key="frame" x="0.0" y="331.33333333333331" width="331.33333333333331" height="85"/>
+                                                <rect key="frame" x="0.0" y="331.33333333333331" width="331.33333333333343" height="85"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="CMz-4c-8AD" secondAttribute="height" multiplier="187:48" id="el1-na-oDK"/>
                                                 </constraints>
@@ -140,7 +140,7 @@
                         <outlet property="playerOneTextField" destination="ELA-KM-vPV" id="Szu-8M-Lyx"/>
                         <outlet property="playerTwoTextField" destination="Rrm-03-lgo" id="vVK-p0-tMA"/>
                         <outlet property="scoreBoardButton" destination="Gyj-Bh-RFD" id="T6c-DR-lrp"/>
-                        <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" id="S8C-5g-4Ve"/>
+                        <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" modalPresentationStyle="fullScreen" id="S8C-5g-4Ve"/>
                         <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="GUy-UN-Hoq"/>
                     </connections>
                 </viewController>
