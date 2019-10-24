@@ -45,8 +45,8 @@ class GameBoardViewController: UIViewController {
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
-        super.viewDidLoad()
         updateViews()
+        super.viewDidLoad()
     }
     
     // MARK: - Actions
@@ -122,9 +122,8 @@ class GameBoardViewController: UIViewController {
             let playerTwoScore = Int(playerTwoScore.text!)
             else { return }
         let playerOne = PlayerController.shared.players[0]
-        ScoreController.sharedScore.setScore(score: playerOneScore, player: playerOne)
         let playerTwo = PlayerController.shared.players[1]
-        ScoreController.sharedScore.setScore(score: playerTwoScore, player: playerTwo)
+        ScoreController.sharedScore.setScore(playerOneScore: playerOneScore, playerTwoScore: playerTwoScore, playerOne: playerOne, playerTwo: playerTwo)
     }
     
     func disableGameButtons() {

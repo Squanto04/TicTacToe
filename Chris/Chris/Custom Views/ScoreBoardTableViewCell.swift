@@ -11,7 +11,7 @@ import UIKit
 class ScoreBoardTableViewCell: UITableViewCell {
     
     var score: Score? {
-        didSet {
+        didSet{
             setUpViews()
         }
     }
@@ -31,13 +31,14 @@ class ScoreBoardTableViewCell: UITableViewCell {
     
     
     func setUpViews() {
-        playerOneLabel.text = PlayerController.shared.players[0].name
-        playerTwoLabel.text = PlayerController.shared.players[1].name
+        guard let score = score else { return }
+        playerOneLabel.text = score.playerOne.name
+        playerTwoLabel.text = score.playerTwo.name
         
-        scoreForPlayerOne.text = "\(ScoreController.sharedScore.scores[0].score)"
-        scoreForPlayerTwo.text = "\(ScoreController.sharedScore.scores[1].score)"
+        scoreForPlayerOne.text = "\(score.playerOneScore)"
+        scoreForPlayerTwo.text = "\(score.playerTwoScore)"
         
-        timeLabel.text = ScoreController.sharedScore.scores[0].timestamp.timeAsString()
-        dateLabel.text = ScoreController.sharedScore.scores[0].timestamp.dateAsString()
+        timeLabel.text = score.timestamp.timeAsString()
+        dateLabel.text = score.timestamp.dateAsString()
     }
 }

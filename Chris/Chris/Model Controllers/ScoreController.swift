@@ -14,9 +14,9 @@ class ScoreController {
     
     var scores: [Score] = []
     
-    func setScore(score: Int, player: Player) {
-        let newScore = Score(score: score, player: player)
-        scores.append(newScore)
+    func setScore(playerOneScore: Int, playerTwoScore: Int, playerOne: Player, playerTwo: Player) {
+        let newGameScore = Score(playerOne: playerOne, playerOneScore: playerOneScore, playerTwo: playerTwo, playerTwoScore: playerTwoScore)
+        scores.append(newGameScore)
         PlayerController.shared.saveToPersistantStore()
     }
 }
