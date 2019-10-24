@@ -20,6 +20,11 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            return
+        }
     }
     
     // MARK: - Actions
@@ -50,6 +55,7 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
             else { return }
         PlayerController.shared.createPlayer(name: playerOne, icon: true)
         PlayerController.shared.createPlayer(name: playerTwo, icon: false)
+        performSegue(withIdentifier: "toGameboardVC", sender: sender)
     }
     
     // MARK: - Helper Functions
