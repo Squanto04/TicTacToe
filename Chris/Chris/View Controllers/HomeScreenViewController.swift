@@ -45,9 +45,6 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
             else { return }
         PlayerController.shared.createPlayer(name: playerOne, icon: true)
         PlayerController.shared.createPlayer(name: playerTwo, icon: false)
-        if playerOne != "" {
-            performSegue(withIdentifier: "toGameboardVC", sender: sender)
-        }
     }
     
     // MARK: - Helper Functions
