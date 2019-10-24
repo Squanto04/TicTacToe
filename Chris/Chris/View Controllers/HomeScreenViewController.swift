@@ -20,6 +20,11 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            return
+        }
     }
     
     // MARK: - Actions
