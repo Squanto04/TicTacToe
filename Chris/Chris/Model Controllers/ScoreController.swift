@@ -17,7 +17,7 @@ class ScoreController {
     func setScore(playerOneScore: Int, playerTwoScore: Int, playerOne: Player, playerTwo: Player) {
         let newGameScore = Score(playerOne: playerOne, playerOneScore: playerOneScore, playerTwo: playerTwo, playerTwoScore: playerTwoScore)
         scores.append(newGameScore)
-        PlayerController.shared.saveToPersistantStore()
+        saveToPersistantStore()
     }
     
     func createFileForPersistence() -> URL {

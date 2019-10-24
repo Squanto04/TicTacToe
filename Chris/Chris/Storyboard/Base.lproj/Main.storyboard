@@ -100,7 +100,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="scoreBoardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VkB-aF-13M"/>
-                                                    <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="4Lw-1s-NIt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-SX-yhw" customClass="TicTacToeButton" customModule="Chris" customModuleProvider="target">
@@ -112,7 +111,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="letsPlayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7B7-FK-oKX"/>
-                                                    <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" modalPresentationStyle="fullScreen" id="5Y3-Jn-ABD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -142,6 +140,8 @@
                         <outlet property="playerOneTextField" destination="ELA-KM-vPV" id="Szu-8M-Lyx"/>
                         <outlet property="playerTwoTextField" destination="Rrm-03-lgo" id="vVK-p0-tMA"/>
                         <outlet property="scoreBoardButton" destination="Gyj-Bh-RFD" id="T6c-DR-lrp"/>
+                        <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" id="S8C-5g-4Ve"/>
+                        <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="GUy-UN-Hoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -151,7 +151,9 @@
         <!--Scoreboard-->
         <scene sceneID="7MI-Pf-mzs">
             <objects>
-                <viewControllerPlaceholder storyboardName="Scoreboard" id="9UG-Qr-7Bp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Scoreboard" id="9UG-Qr-7Bp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ngt-Cu-nF9"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJY-Ys-XaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="680" y="540"/>
