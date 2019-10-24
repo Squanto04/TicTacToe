@@ -142,8 +142,9 @@
                         <outlet property="playerOneTextField" destination="ELA-KM-vPV" id="Szu-8M-Lyx"/>
                         <outlet property="playerTwoTextField" destination="Rrm-03-lgo" id="vVK-p0-tMA"/>
                         <outlet property="scoreBoardButton" destination="Gyj-Bh-RFD" id="T6c-DR-lrp"/>
-                        <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" id="KN6-gD-JXJ"/>
-                        <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="8wi-VF-mPK"/>
+
+                        <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" id="S8C-5g-4Ve"/>
+                        <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="GUy-UN-Hoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,7 +154,9 @@
         <!--Scoreboard-->
         <scene sceneID="7MI-Pf-mzs">
             <objects>
-                <viewControllerPlaceholder storyboardName="Scoreboard" id="9UG-Qr-7Bp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Scoreboard" id="9UG-Qr-7Bp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ngt-Cu-nF9"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJY-Ys-XaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="680" y="540"/>

@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController, UITextFieldDelegate {
-
+    
     // MARK: - Outlet
     @IBOutlet weak var playerOneTextField: UITextField!
     @IBOutlet weak var playerTwoTextField: UITextField!
@@ -45,8 +45,6 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
             else { return }
         PlayerController.shared.createPlayer(name: playerOne, icon: true)
         PlayerController.shared.createPlayer(name: playerTwo, icon: false)
-        
-        performSegue(withIdentifier: "toGameboardVC", sender: self)
     }
     
     // MARK: - Helper Functions
@@ -59,5 +57,4 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = .white
         nightModeLabel.textColor = .black
     }
-
 }

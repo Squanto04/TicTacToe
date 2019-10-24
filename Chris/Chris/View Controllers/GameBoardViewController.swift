@@ -86,7 +86,6 @@ class GameBoardViewController: UIViewController {
                 self.disableGameButtons()
             }
         }
-        
         var count = 1
         if gameIsActive == true {
             for i in gameState {
