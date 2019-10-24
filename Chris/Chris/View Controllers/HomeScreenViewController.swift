@@ -23,6 +23,11 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Actions
+    @IBAction func tapGesture(_ sender: Any) {
+        playerOneTextField.resignFirstResponder()
+        playerTwoTextField.resignFirstResponder()
+    }
+    
     @IBAction func nightModeSwitchTapped(_ sender: Any) {
         if PlayerController.shared.nightMode == false {
             turnNightModeOn()
@@ -63,5 +68,24 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
         playerOneTextField.resignFirstResponder()
         playerTwoTextField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        showTextFields(textfield: playerTwoTextField, moveDistance: -250, up: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        showTextFields(textfield: playerOneTextField, moveDistance: -250, up: false)
+    }
+    
+    func showTextFields(textfield: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateNameTextFields", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
     }
 }

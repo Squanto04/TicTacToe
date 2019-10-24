@@ -126,6 +126,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bm1-Bt-0gn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G20-hO-9zw"/>
                             <constraint firstItem="SXN-Sx-sXJ" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="MQ1-bC-pwY"/>
@@ -134,6 +135,9 @@
                             <constraint firstAttribute="bottom" secondItem="bm1-Bt-0gn" secondAttribute="bottom" constant="50" id="e39-T2-ZJ4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="knn-nz-TTh" appends="YES" id="gal-tS-gMr"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="mOX-Nn-MlY"/>
                     <connections>
@@ -142,12 +146,17 @@
                         <outlet property="playerOneTextField" destination="ELA-KM-vPV" id="Szu-8M-Lyx"/>
                         <outlet property="playerTwoTextField" destination="Rrm-03-lgo" id="vVK-p0-tMA"/>
                         <outlet property="scoreBoardButton" destination="Gyj-Bh-RFD" id="T6c-DR-lrp"/>
-
                         <segue destination="1n8-SW-Fan" kind="presentation" identifier="toGameboardVC" id="S8C-5g-4Ve"/>
                         <segue destination="9UG-Qr-7Bp" kind="show" identifier="toScoreboardVC" id="GUy-UN-Hoq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="knn-nz-TTh">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="jn4-VR-UHk"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="Fzn-hW-ZOS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="828.98550724637687" y="95.758928571428569"/>
         </scene>
