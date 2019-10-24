@@ -57,4 +57,11 @@ class HomeScreenViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = .white
         nightModeLabel.textColor = .black
     }
+    
+    // MARK: - Textfield Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        playerOneTextField.resignFirstResponder()
+        playerTwoTextField.resignFirstResponder()
+        return true
+    }
 }
