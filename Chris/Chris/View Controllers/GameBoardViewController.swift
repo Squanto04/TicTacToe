@@ -54,11 +54,11 @@ class GameBoardViewController: UIViewController {
         if (gameState[sender.tag - 1] == 0 && gameIsActive == true) {
             gameState[sender.tag - 1] = activePlayer
             if activePlayer == 1 {
-                sender.setImage(UIImage(named: "cross.png"), for: UIControl.State())
+                sender.setImage(UIImage(named: "cross.png"), for: .normal)
                 activePlayer = 2
                 turnPickerImageView.image = playerTwoTurn
             } else {
-                sender.setImage(UIImage(named: "circle.png"), for: UIControl.State())
+                sender.setImage(UIImage(named: "circle.png"), for: .normal)
                 activePlayer = 1
                 turnPickerImageView.image = playerOneTurn
             }
@@ -97,26 +97,36 @@ class GameBoardViewController: UIViewController {
     }
     
     @IBAction func newPlayersButtonTapped(_ sender: Any) {
-        addPlayersScore()
-        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-        activePlayer = Int.random(in: 1..<3)
-        enableGameButtons()
-        playAgainButton.isHidden = true
-        playerWonLabel.isHidden = true
-        newPlayersButton.isHidden = true
-        endGameButton.isHidden = false
+        resetBoard()
         PlayerController.shared.players = []
         self.dismiss(animated: true)
     }
     
     @IBAction func endGameButtonTapped(_ sender: Any) {
+        PlayerController.shared.players = []
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func playAgainButtonTapped(_ sender: Any) {
+        resetBoard()
+        gameIsActive = true
     }
     
     // MARK: - Helper Functions
+    func resetBoard() {
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        activePlayer = Int.random(in: 1..<3)
+        playAgainButton.isHidden = true
+        playerWonLabel.isHidden = true
+        newPlayersButton.isHidden = true
+        endGameButton.isHidden = false
+        for i in 1...9 {
+            let button = view.viewWithTag(i) as! UIButton
+            button.setImage(nil, for: .normal)
+        }
+        enableGameButtons()
+    }
+    
     func addPlayersScore() {
         guard let playerOneScore = Int(playerOneScore.text!),
             let playerTwoScore = Int(playerTwoScore.text!)
