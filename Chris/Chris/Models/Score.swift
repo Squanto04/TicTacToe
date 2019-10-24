@@ -9,13 +9,19 @@
 import Foundation
 
 class Score: Codable {
-    var score: Int
+    var game: String
+    var playerOne: Player
+    var playerOneScore: Int
+    var playerTwo: Player
+    var playerTwoScore: Int
     var timestamp: Date
-    var player: Player
     
-    init(score: Int, timestamp: Date = Date(), player: Player) {
-        self.score = score
+    init(game: String = UUID().uuidString, playerOne: Player, playerOneScore: Int, playerTwo: Player, playerTwoScore: Int, timestamp: Date = Date()) {
+        self.game = game
+        self.playerOne = playerOne
+        self.playerOneScore = playerOneScore
+        self.playerTwo = playerTwo
+        self.playerTwoScore = playerTwoScore
         self.timestamp = timestamp
-        self.player = player
     }
 }
