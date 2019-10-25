@@ -11,3 +11,4 @@ Bugs
 6. Add tap Gesture to screen to resignFirstResponder - Fixed, pending merge
 7. Rename the app
 8. Guard against both scores being zero so score doesn't get logged
+9. Clear text field when beginning a game
