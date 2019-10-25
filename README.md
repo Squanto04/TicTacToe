@@ -12,3 +12,5 @@ Bugs
 7. Rename the app
 8. Guard against both scores being zero so score doesn't get logged
 9. Clear text field when beginning a game
+10. Flip scoreboard order
+11. Flip time and date so date is on top
