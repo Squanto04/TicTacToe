@@ -20,6 +20,10 @@ class GameBoardViewController: UIViewController {
     var playerOneTempScore = 0
     var playerTwoTempScore = 0
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return PlayerController.shared.current
+    }
+    
     // MARK: - Outlets
     // Labels
     @IBOutlet weak var playerOneLabel: UILabel!
@@ -44,11 +48,24 @@ class GameBoardViewController: UIViewController {
     @IBOutlet weak var gameButtonSeven: UIButton!
     @IBOutlet weak var gameButtonEight: UIButton!
     @IBOutlet weak var gameButtonNine: UIButton!
+    // Constraints
+    @IBOutlet weak var gameBoardConstraint: NSLayoutConstraint!
+    // Views
+    @IBOutlet weak var playerOneView: UIView!
+    @IBOutlet weak var playerTwoView: UIView!
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
-        updateViews()
         super.viewDidLoad()
+        updateViews()
+        setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.setNeedsStatusBarAppearanceUpdate()
+        newPlayersButton.layer.cornerRadius = newPlayersButton.frame.height / 6
+        playAgainButton.layer.cornerRadius = playAgainButton.frame.height / 6
     }
     
     // MARK: - Actions
@@ -79,11 +96,13 @@ class GameBoardViewController: UIViewController {
                     playerTwoScore.text = String(playerTwoTempScore)
                 }
                 
-                playAgainButton.isHidden = false
-                playerWonLabel.isHidden = false
-                newPlayersButton.isHidden = false
+                UIView.animate(withDuration: 0.3) {
+                    self.playAgainButton.isHidden = false
+                    self.playerWonLabel.isHidden = false
+                    self.newPlayersButton.isHidden = false
+                }
                 endGameButton.isHidden = true
-                self.disableGameButtons()
+                disableGameButtons()
             }
         }
         var count = 1
@@ -93,15 +112,18 @@ class GameBoardViewController: UIViewController {
             }
             if count != 0 {
                 playerWonLabel.text = "It was a draw!"
-                playAgainButton.isHidden = false
-                playerWonLabel.isHidden = false
-                newPlayersButton.isHidden = false
+                UIView.animate(withDuration: 0.3) {
+                    self.playAgainButton.isHidden = false
+                    self.playerWonLabel.isHidden = false
+                    self.newPlayersButton.isHidden = false
+                }
                 endGameButton.isHidden = true
             }
         }
     }
     
     @IBAction func newPlayersButtonTapped(_ sender: Any) {
+        print("New Players Button Tapped")
         addPlayersScore()
         resetBoard()
         PlayerController.shared.players = []
@@ -109,12 +131,14 @@ class GameBoardViewController: UIViewController {
     }
     
     @IBAction func endGameButtonTapped(_ sender: Any) {
+        print("End Game Button Tapped")
         addPlayersScore()
         PlayerController.shared.players = []
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func playAgainButtonTapped(_ sender: Any) {
+        print("Play Again Button Tapped")
         resetBoard()
         gameIsActive = true
         
@@ -126,13 +150,43 @@ class GameBoardViewController: UIViewController {
     }
     
     // MARK: - Helper Functions
+    func setupViews() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            return
+        }
+        newPlayersButton.isHidden = true
+        playAgainButton.isHidden = true
+        
+        playerOneLabel.sizeToFit()
+        playerTwoLabel.sizeToFit()
+        
+        switch UIDevice().type {
+        case .iPad2, .iPad3, .iPad4, .iPad5, .iPad6, .iPadAir, .iPadAir2, .iPadAir3, .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadMini5, .iPadPro11, .iPadPro9_7, .iPadPro10_5, .iPadPro12_9, .iPadPro2_12_9, .iPadPro3_12_9:
+            gameBoardConstraint.constant = -150
+            playerOneLabel.font = UIFont.systemFont(ofSize: 30.0, weight: .semibold)
+            playerOneScore.font = UIFont.boldSystemFont(ofSize: 40.0)
+            playerTwoLabel.font = UIFont.systemFont(ofSize: 30.0, weight: .semibold)
+            playerTwoScore.font = UIFont.boldSystemFont(ofSize: 40.0)
+        default:
+            gameBoardConstraint.constant = 0
+            playerOneLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)
+            playerOneScore.font = UIFont.boldSystemFont(ofSize: 30.0)
+            playerTwoLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .semibold)
+            playerTwoScore.font = UIFont.boldSystemFont(ofSize: 30.0)
+        }
+    }
+    
     func resetBoard() {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         activePlayer = Int.random(in: 1..<3)
+        UIView.animate(withDuration: 0.3) {
+            self.endGameButton.isHidden = false
+        }
         playAgainButton.isHidden = true
         playerWonLabel.isHidden = true
         newPlayersButton.isHidden = true
-        endGameButton.isHidden = false
         for i in 1...9 {
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for: .normal)
@@ -144,6 +198,9 @@ class GameBoardViewController: UIViewController {
         guard let playerOneScore = Int(playerOneScore.text!),
             let playerTwoScore = Int(playerTwoScore.text!)
             else { return }
+        if playerOneScore == 0 && playerTwoScore == 0 {
+            return
+        }
         let playerOne = PlayerController.shared.players[0]
         let playerTwo = PlayerController.shared.players[1]
         ScoreController.sharedScore.setScore(playerOneScore: playerOneScore, playerTwoScore: playerTwoScore, playerOne: playerOne, playerTwo: playerTwo)
@@ -179,6 +236,8 @@ class GameBoardViewController: UIViewController {
         
         if PlayerController.shared.nightMode == false {
             self.view.backgroundColor = .white
+            self.playerOneView.backgroundColor = .white
+            self.playerTwoView.backgroundColor = .white
             self.gameBoardImageView.image = UIImage(named: "boardBlack")
             self.playerOneTurn = UIImage(named: "LeftArrow")
             self.playerTwoTurn = UIImage(named: "RightArrow")
@@ -195,6 +254,8 @@ class GameBoardViewController: UIViewController {
             }
         } else {
             self.view.backgroundColor = .black
+            self.playerOneView.backgroundColor = .black
+            self.playerTwoView.backgroundColor = .black
             self.gameBoardImageView.image = UIImage(named: "boardWhite")
             self.playerOneTurn = UIImage(named: "LeftWhiteArrow")
             self.playerTwoTurn = UIImage(named: "RightWhiteArrow")

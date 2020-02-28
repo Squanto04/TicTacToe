@@ -12,6 +12,7 @@ class ScoreBoardTableViewCell: UITableViewCell {
     
     var score: Score? {
         didSet{
+            updateForNightMode()
             setUpViews()
         }
     }
@@ -29,6 +30,25 @@ class ScoreBoardTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    func updateForNightMode() {
+        if PlayerController.shared.nightMode {
+            self.backgroundColor = .black
+            self.playerOneLabel.textColor = .white
+            self.playerTwoLabel.textColor = .white
+            self.scoreForPlayerOne.textColor = .white
+            self.scoreForPlayerTwo.textColor = .white
+            self.timeLabel.textColor = .white
+            self.dateLabel.textColor = .white
+        } else {
+            self.backgroundColor = .white
+            self.playerOneLabel.textColor = .black
+            self.playerTwoLabel.textColor = .black
+            self.scoreForPlayerOne.textColor = .black
+            self.scoreForPlayerTwo.textColor = .black
+            self.timeLabel.textColor = .black
+            self.dateLabel.textColor = .black
+        }
+    }
     
     func setUpViews() {
         guard let score = score else { return }

@@ -32,8 +32,8 @@ class ScoreController {
         let jsonEncoder = JSONEncoder()
         
         do {
-            let jsonChris = try jsonEncoder.encode(scores)
-            try jsonChris.write(to: createFileForPersistence())
+            let jsonScores = try jsonEncoder.encode(scores)
+            try jsonScores.write(to: createFileForPersistence())
         } catch let encodingError {
             print("Error: Could not save data, \(encodingError.localizedDescription)")
         }

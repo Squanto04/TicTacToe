@@ -11,6 +11,8 @@
 		28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD02360C7AF005A8AFC /* PlayerController.swift */; };
 		28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD22360C7C5005A8AFC /* Score.swift */; };
 		28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD62360C82E005A8AFC /* ScoreController.swift */; };
+		35B5EC44240866E600F1200C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EC43240866E600F1200C /* UIDeviceExtension.swift */; };
+		35B5EC462408763000F1200C /* ToolbarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EC452408763000F1200C /* ToolbarExtension.swift */; };
 		35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55992360BDFB00649AE2 /* AppDelegate.swift */; };
 		35EF559F2360BDFB00649AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF559D2360BDFB00649AE2 /* Main.storyboard */; };
 		35EF55A12360BDFD00649AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55A02360BDFD00649AE2 /* Assets.xcassets */; };
@@ -30,7 +32,9 @@
 		28CBEFD02360C7AF005A8AFC /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerController.swift; path = "Chris/Model Controllers/PlayerController.swift"; sourceTree = SOURCE_ROOT; };
 		28CBEFD22360C7C5005A8AFC /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		28CBEFD62360C82E005A8AFC /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
-		35EF55962360BDFB00649AE2 /* Chris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B5EC43240866E600F1200C /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		35B5EC452408763000F1200C /* ToolbarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarExtension.swift; sourceTree = "<group>"; };
+		35EF55962360BDFB00649AE2 /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EF55992360BDFB00649AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35EF559E2360BDFB00649AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35EF55A02360BDFD00649AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		35EF55972360BDFB00649AE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35EF55962360BDFB00649AE2 /* Chris.app */,
+				35EF55962360BDFB00649AE2 /* Tic Tac Toe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				35EF55BD2360D33D00649AE2 /* DateExtension.swift */,
+				35B5EC452408763000F1200C /* ToolbarExtension.swift */,
+				35B5EC43240866E600F1200C /* UIDeviceExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,7 +176,7 @@
 			);
 			name = Chris;
 			productName = Chris;
-			productReference = 35EF55962360BDFB00649AE2 /* Chris.app */;
+			productReference = 35EF55962360BDFB00649AE2 /* Tic Tac Toe.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -185,6 +191,7 @@
 				TargetAttributes = {
 					35EF55952360BDFB00649AE2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -226,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B5EC462408763000F1200C /* ToolbarExtension.swift in Sources */,
 				28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */,
 				28CBEFCF2360C5A8005A8AFC /* Player.swift in Sources */,
 				35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */,
@@ -235,6 +243,7 @@
 				35EF55C22360EAA700649AE2 /* ScoreBoardTableViewCell.swift in Sources */,
 				35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */,
 				28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */,
+				35B5EC44240866E600F1200C /* UIDeviceExtension.swift in Sources */,
 				35EF55C02360DD2200649AE2 /* TicTacToeButton.swift in Sources */,
 				28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */,
 			);
@@ -399,8 +408,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.squantoinc.Chris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_NAME = "Tic Tac Toe";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -418,8 +427,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.squantoinc.Chris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PRODUCT_NAME = "Tic Tac Toe";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
