@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fWm-aV-R8C">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GameBoard-->
+        <scene sceneID="cTi-Qd-ENK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameBoard" id="1n8-SW-Fan" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LJk-La-ug5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGg-Lf-O9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="542"/>
+        </scene>
+        <!--Main Menu View Controller-->
+        <scene sceneID="pMW-kS-6bc">
+            <objects>
+                <viewController id="FHQ-DS-XhQ" customClass="MainMenuViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H3d-wa-ife">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TicLogoTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="68N-NE-Ymq">
+                                <rect key="frame" x="82.666666666666671" y="74.000000000000014" width="248.66666666666663" height="248.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="68N-NE-Ymq" secondAttribute="height" multiplier="1:1" id="RSv-va-wRl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TicTacToeTransparent" translatesAutoresizingMaskIntoConstraints="NO" id="8YB-ON-Lb2">
+                                <rect key="frame" x="41.333333333333343" y="332.33333333333331" width="331.33333333333326" height="85.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8YB-ON-Lb2" secondAttribute="height" multiplier="287:74" id="YZo-Eo-UYK"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-Xu-Udy">
+                                <rect key="frame" x="82.666666666666671" y="497.66666666666674" width="248.66666666666663" height="264.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxn-ne-Ump" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="248.66666666666666" height="43.666666666666664"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="One Player">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playerOneTapped:" destination="FHQ-DS-XhQ" eventType="touchUpInside" id="S6W-fa-LIU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGJ-OM-9tw" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="73.666666666666686" width="248.66666666666666" height="43.666666666666657"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Two Player">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playerTwoTapped:" destination="FHQ-DS-XhQ" eventType="touchUpInside" id="GMM-jT-Qy9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8si-fe-1OE" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="147.33333333333331" width="248.66666666666666" height="43.333333333333343"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="JHp-6k-hC8" kind="show" identifier="toSettingsVC" id="KTe-F2-2nh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfG-Av-eFq" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="220.66666666666669" width="248.66666666666666" height="43.666666666666686"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Scoreboard">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0aT-IH-Sur" kind="presentation" identifier="toScoreboardVC" id="HnI-QU-Ohd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="v8v-kM-DGd" userLabel="Player Stack View">
+                                <rect key="frame" x="455.33333333333337" y="497.66666666666674" width="331.33333333333337" height="264.33333333333326"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxW-aB-eIG">
+                                        <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="43.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="FHQ-DS-XhQ" id="7FZ-b4-ErB"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpc-6i-LWv">
+                                        <rect key="frame" x="0.0" y="73.666666666666686" width="331.33333333333331" height="43.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="FHQ-DS-XhQ" id="Pa0-J0-9Pk"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSk-zr-oH4" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="147.33333333333331" width="331.33333333333331" height="43.333333333333343"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Let's Play!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="letsPlayButtonTapped:" destination="FHQ-DS-XhQ" eventType="touchUpInside" id="lgd-BE-WrF"/>
+                                            <segue destination="1n8-SW-Fan" kind="show" identifier="toGameBoardVC" id="lxh-mH-VOz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opv-0C-XNb" customClass="TicTacToeButton" customModule="Tic_Tac_Toe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="220.66666666666669" width="331.33333333333331" height="43.666666666666686"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="FHQ-DS-XhQ" eventType="touchUpInside" id="2fG-5X-ery"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k36-5i-TnH" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="812" width="320" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZdI-V3-vDD"/>
+                                    <constraint firstAttribute="width" constant="320" id="iIk-d5-Zvv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="v8v-kM-DGd" firstAttribute="centerX" secondItem="ERz-CA-Zog" secondAttribute="centerX" constant="414" id="2gS-JQ-kDX"/>
+                            <constraint firstItem="68N-NE-Ymq" firstAttribute="width" secondItem="H3d-wa-ife" secondAttribute="width" multiplier="0.6" id="9bU-9h-al4"/>
+                            <constraint firstItem="1qt-Xu-Udy" firstAttribute="centerX" secondItem="ERz-CA-Zog" secondAttribute="centerX" id="AkE-Gx-17s"/>
+                            <constraint firstItem="k36-5i-TnH" firstAttribute="centerX" secondItem="ERz-CA-Zog" secondAttribute="centerX" id="LRX-Qh-KHh"/>
+                            <constraint firstItem="v8v-kM-DGd" firstAttribute="top" secondItem="8YB-ON-Lb2" secondAttribute="bottom" constant="80" id="O7s-Up-Ndu"/>
+                            <constraint firstItem="68N-NE-Ymq" firstAttribute="top" secondItem="ERz-CA-Zog" secondAttribute="top" constant="30" id="ONF-6k-y7C"/>
+                            <constraint firstItem="1qt-Xu-Udy" firstAttribute="width" secondItem="H3d-wa-ife" secondAttribute="width" multiplier="0.6" id="WkR-9V-f0n"/>
+                            <constraint firstItem="k36-5i-TnH" firstAttribute="bottom" secondItem="ERz-CA-Zog" secondAttribute="bottom" id="ZFD-KS-EX6"/>
+                            <constraint firstItem="68N-NE-Ymq" firstAttribute="centerX" secondItem="ERz-CA-Zog" secondAttribute="centerX" id="ZbQ-Si-Oj6"/>
+                            <constraint firstItem="8YB-ON-Lb2" firstAttribute="top" secondItem="68N-NE-Ymq" secondAttribute="bottom" constant="10" id="gLS-Ug-nbM"/>
+                            <constraint firstItem="v8v-kM-DGd" firstAttribute="width" secondItem="H3d-wa-ife" secondAttribute="width" multiplier="0.8" id="k58-wI-E7s"/>
+                            <constraint firstItem="8YB-ON-Lb2" firstAttribute="width" secondItem="H3d-wa-ife" secondAttribute="width" multiplier="0.8" id="nJR-vh-S27"/>
+                            <constraint firstItem="8YB-ON-Lb2" firstAttribute="centerX" secondItem="ERz-CA-Zog" secondAttribute="centerX" id="nOH-wC-MKu"/>
+                            <constraint firstItem="k36-5i-TnH" firstAttribute="top" secondItem="1qt-Xu-Udy" secondAttribute="bottom" constant="50" id="oNy-9o-3jW"/>
+                            <constraint firstItem="k36-5i-TnH" firstAttribute="top" secondItem="v8v-kM-DGd" secondAttribute="bottom" constant="50" id="uEz-ED-Qwf"/>
+                            <constraint firstItem="1qt-Xu-Udy" firstAttribute="top" secondItem="8YB-ON-Lb2" secondAttribute="bottom" constant="80" id="zFx-r4-CzB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ERz-CA-Zog"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="whP-II-dWI" appends="YES" id="nb8-EC-cPc"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="oYH-Ik-ykQ"/>
+                    <connections>
+                        <outlet property="adBannerView" destination="k36-5i-TnH" id="6KO-na-CxS"/>
+                        <outlet property="cancelButton" destination="opv-0C-XNb" id="o8q-5T-UpL"/>
+                        <outlet property="letsPlayButton" destination="OSk-zr-oH4" id="HPq-YS-CSc"/>
+                        <outlet property="mainButtonBottomDistantConstraint" destination="oNy-9o-3jW" id="r9X-PO-CPr"/>
+                        <outlet property="mainButtonDistantConstraint" destination="zFx-r4-CzB" id="cJZ-sB-FCQ"/>
+                        <outlet property="mainButtonsConstraint" destination="AkE-Gx-17s" id="i2Q-Za-qzj"/>
+                        <outlet property="mainButtonsStackView" destination="1qt-Xu-Udy" id="QEk-d7-beP"/>
+                        <outlet property="onePlayerButton" destination="pxn-ne-Ump" id="flR-Nl-epv"/>
+                        <outlet property="playerNameStackView" destination="v8v-kM-DGd" id="Vsv-bo-rXs"/>
+                        <outlet property="playerNamesBottomDistantConstraint" destination="uEz-ED-Qwf" id="fSJ-GI-Elz"/>
+                        <outlet property="playerNamesConstraint" destination="2gS-JQ-kDX" id="iKA-6C-PRr"/>
+                        <outlet property="playerNamesDistantConstraint" destination="O7s-Up-Ndu" id="aAm-HS-j00"/>
+                        <outlet property="playerOneTextField" destination="fxW-aB-eIG" id="3iM-yR-b8j"/>
+                        <outlet property="playerTwoTextField" destination="qpc-6i-LWv" id="kl5-G8-CLh"/>
+                        <outlet property="scoreboardButton" destination="IfG-Av-eFq" id="dzq-bG-B25"/>
+                        <outlet property="settingsButton" destination="8si-fe-1OE" id="oS5-8g-Exr"/>
+                        <outlet property="twoPlayerButton" destination="IGJ-OM-9tw" id="Sbv-wP-suZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2J1-Z1-D7S" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="whP-II-dWI">
+                    <connections>
+                        <action selector="tapGestureTapped:" destination="FHQ-DS-XhQ" id="qMl-Ya-P7B"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="386.95652173913044" y="93.75"/>
+        </scene>
+        <!--Scoreboard-->
+        <scene sceneID="5OM-Gk-i25">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scoreboard" id="0aT-IH-Sur" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eKj-cZ-b7J"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yys-JB-SrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Wu-k9-3pM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fWm-aV-R8C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="peu-DX-dbD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FHQ-DS-XhQ" kind="relationship" relationship="rootViewController" id="Q1P-wF-Z6t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bH8-4U-b9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="94"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Qh5-xd-0xw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="JHp-6k-hC8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SC5-zJ-skK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8a-U9-4XY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TicLogoTransparent" width="1200" height="1200"/>
+        <image name="TicTacToeTransparent" width="748" height="192"/>
+    </resources>
+</document>
