@@ -122,6 +122,7 @@ var type: Model {
         "iPad6,12"  : .iPad5,
         "iPad7,5"   : .iPad6, //iPad 2018
         "iPad7,6"   : .iPad6,
+        "iPad7,7"   : .iPad6,
 
         //iPad Mini
         "iPad2,5"   : .iPadMini,

@@ -10,7 +10,7 @@ import Foundation
 
 class ScoreController {
     
-    static let sharedScore = ScoreController()
+    static let shared = ScoreController()
     
     var scores: [Score] = []
     
@@ -21,16 +21,13 @@ class ScoreController {
     }
     
     func createFileForPersistence() -> URL {
-        //Grab users document directory
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        //Create new fileURL on users phone
-        let fileURL = urls[0].appendingPathComponent("Chris.json")
+        let fileURL = urls[0].appendingPathComponent("TicTacToe-Scores.json")
         return fileURL
     }
-
+    
     func saveToPersistantStore() {
         let jsonEncoder = JSONEncoder()
-        
         do {
             let jsonScores = try jsonEncoder.encode(scores)
             try jsonScores.write(to: createFileForPersistence())
@@ -41,7 +38,6 @@ class ScoreController {
     
     func loadFromPersistantStorage() {
         let jsonDecoder = JSONDecoder()
-        
         do {
             let jsonData = try Data(contentsOf: createFileForPersistence())
             let decodeChrisData = try jsonDecoder.decode([Score].self, from: jsonData)

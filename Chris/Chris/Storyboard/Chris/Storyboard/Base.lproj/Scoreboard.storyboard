@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9wV-gC-CmA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9wV-gC-CmA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +31,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m48-ld-z8Z">
-                                    <rect key="frame" x="20" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="15" y="0.0" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="m48-ld-z8Z" secondAttribute="height" multiplier="1:1" id="r4m-xY-IcM"/>
                                     </constraints>
@@ -51,7 +52,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvF-Tz-RUI">
-                                    <rect key="frame" x="350" y="0.0" width="44" height="44"/>
+                                    <rect key="frame" x="355" y="0.0" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="LvF-Tz-RUI" secondAttribute="height" multiplier="1:1" id="Ytz-c6-q97"/>
                                     </constraints>
@@ -65,13 +66,13 @@
                             </subviews>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="m48-ld-z8Z" firstAttribute="leading" secondItem="Ald-SW-Yx6" secondAttribute="leading" constant="20" id="4jO-rj-pDi"/>
+                                <constraint firstItem="m48-ld-z8Z" firstAttribute="leading" secondItem="Ald-SW-Yx6" secondAttribute="leading" constant="15" id="4jO-rj-pDi"/>
                                 <constraint firstItem="LvF-Tz-RUI" firstAttribute="height" secondItem="Ald-SW-Yx6" secondAttribute="height" id="55a-Dh-JBz"/>
                                 <constraint firstItem="m48-ld-z8Z" firstAttribute="height" secondItem="Ald-SW-Yx6" secondAttribute="height" id="MRD-m1-daP"/>
                                 <constraint firstItem="LvF-Tz-RUI" firstAttribute="centerY" secondItem="Ald-SW-Yx6" secondAttribute="centerY" id="TQM-pR-8DT"/>
                                 <constraint firstItem="dov-o9-ShZ" firstAttribute="centerY" secondItem="Ald-SW-Yx6" secondAttribute="centerY" id="d9o-Y7-Hau"/>
                                 <constraint firstItem="m48-ld-z8Z" firstAttribute="centerY" secondItem="Ald-SW-Yx6" secondAttribute="centerY" id="ihh-em-FFt"/>
-                                <constraint firstAttribute="trailing" secondItem="LvF-Tz-RUI" secondAttribute="trailing" constant="20" id="jrO-GD-eq1"/>
+                                <constraint firstAttribute="trailing" secondItem="LvF-Tz-RUI" secondAttribute="trailing" constant="15" id="jrO-GD-eq1"/>
                                 <constraint firstItem="dov-o9-ShZ" firstAttribute="height" secondItem="Ald-SW-Yx6" secondAttribute="height" id="sCZ-gk-ECX"/>
                                 <constraint firstItem="dov-o9-ShZ" firstAttribute="centerX" secondItem="Ald-SW-Yx6" secondAttribute="centerX" id="usp-cH-T2z"/>
                             </constraints>
@@ -190,10 +191,32 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="noScoresLabel" destination="jgf-hd-JCN" id="meL-Le-UjM"/>
+                        <outlet property="noScoresView" destination="8Ug-5q-CWh" id="a6h-lZ-bi6"/>
                         <segue destination="RIg-Ex-5EZ" kind="show" identifier="toMainVCFromSB" id="DW1-hA-JhC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsw-Pa-Io6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="8Ug-5q-CWh">
+                    <rect key="frame" x="0.0" y="0.0" width="411" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No scores to display" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-hd-JCN">
+                            <rect key="frame" x="0.0" y="22" width="411" height="128"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="jgf-hd-JCN" firstAttribute="width" secondItem="8Ug-5q-CWh" secondAttribute="width" id="Xa0-hS-JQD"/>
+                        <constraint firstItem="jgf-hd-JCN" firstAttribute="height" secondItem="8Ug-5q-CWh" secondAttribute="height" id="iyr-o8-N3S"/>
+                        <constraint firstItem="jgf-hd-JCN" firstAttribute="centerY" secondItem="4x0-YM-Vlk" secondAttribute="centerY" id="jFe-pi-5pM"/>
+                        <constraint firstItem="jgf-hd-JCN" firstAttribute="centerX" secondItem="4x0-YM-Vlk" secondAttribute="centerX" id="tfn-qe-Qjs"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="4x0-YM-Vlk"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="400.00000000000006" y="824.18478260869574"/>
         </scene>

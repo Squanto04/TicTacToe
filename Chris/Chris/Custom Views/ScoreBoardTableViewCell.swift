@@ -32,7 +32,7 @@ class ScoreBoardTableViewCell: UITableViewCell {
     
     func updateForNightMode() {
         if PlayerController.shared.nightMode {
-            self.backgroundColor = .black
+            self.backgroundColor = .darkerGray
             self.playerOneLabel.textColor = .white
             self.playerTwoLabel.textColor = .white
             self.scoreForPlayerOne.textColor = .white

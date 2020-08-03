@@ -5,17 +5,21 @@
 //  Created by Jordan Lamb on 10/23/19.
 //  Copyright © 2019 Squanto Inc. All rights reserved.
 //
+// APP ID: ca-app-pub-3764635989682526~8793533241
+// UNIT ID: ca-app-pub-3764635989682526/9108108457
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ScoreController.sharedScore.loadFromPersistantStorage()
+        print("Device Model: \(UIDevice().type)")
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        PlayerController.shared.loadFromPersistantStorage()
         return true
     }
 

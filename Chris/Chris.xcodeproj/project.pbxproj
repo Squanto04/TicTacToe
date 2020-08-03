@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,14 @@
 		28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD02360C7AF005A8AFC /* PlayerController.swift */; };
 		28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD22360C7C5005A8AFC /* Score.swift */; };
 		28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CBEFD62360C82E005A8AFC /* ScoreController.swift */; };
+		352FA5652480658600D9F5EC /* WinningCombos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352FA5642480658600D9F5EC /* WinningCombos.xcassets */; };
+		3533337F24996E7600C2C524 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3533337E24996E7600C2C524 /* Settings.storyboard */; };
+		35333381249973DC00C2C524 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35333380249973DC00C2C524 /* MainMenuViewController.swift */; };
+		35B01884249AE5400096E6FC /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B01883249AE5400096E6FC /* PrivacyPolicyViewController.swift */; };
+		35B01886249D69B90096E6FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B01885249D69B90096E6FC /* Constants.swift */; };
+		35B410FE24998F9800A37614 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B410FD24998F9800A37614 /* SettingsTableViewController.swift */; };
+		35B411002499A97000A37614 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B410FF2499A97000A37614 /* UIColor.swift */; };
+		35B411022499AD8B00A37614 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B411012499AD8B00A37614 /* Colors.xcassets */; };
 		35B5EC44240866E600F1200C /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EC43240866E600F1200C /* UIDeviceExtension.swift */; };
 		35B5EC462408763000F1200C /* ToolbarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B5EC452408763000F1200C /* ToolbarExtension.swift */; };
 		35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55992360BDFB00649AE2 /* AppDelegate.swift */; };
@@ -19,12 +27,12 @@
 		35EF55A42360BDFD00649AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55A22360BDFD00649AE2 /* LaunchScreen.storyboard */; };
 		35EF55B22360D13000649AE2 /* Scoreboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55B02360D13000649AE2 /* Scoreboard.storyboard */; };
 		35EF55B42360D14300649AE2 /* GameBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EF55B32360D14300649AE2 /* GameBoard.storyboard */; };
-		35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */; };
 		35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B72360D24800649AE2 /* GameBoardViewController.swift */; };
 		35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */; };
 		35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55BD2360D33D00649AE2 /* DateExtension.swift */; };
 		35EF55C02360DD2200649AE2 /* TicTacToeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55BF2360DD2200649AE2 /* TicTacToeButton.swift */; };
 		35EF55C22360EAA700649AE2 /* ScoreBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF55C12360EAA700649AE2 /* ScoreBoardTableViewCell.swift */; };
+		8F710AA24AFC26EB29B8A0FD /* Pods_Chris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B80FFFD567CA5D5BF1C9C0 /* Pods_Chris.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		28CBEFD02360C7AF005A8AFC /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayerController.swift; path = "Chris/Model Controllers/PlayerController.swift"; sourceTree = SOURCE_ROOT; };
 		28CBEFD22360C7C5005A8AFC /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		28CBEFD62360C82E005A8AFC /* ScoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreController.swift; sourceTree = "<group>"; };
+		352FA5642480658600D9F5EC /* WinningCombos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WinningCombos.xcassets; sourceTree = "<group>"; };
+		3533337E24996E7600C2C524 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		35333380249973DC00C2C524 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		35B01883249AE5400096E6FC /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		35B01885249D69B90096E6FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35B410FD24998F9800A37614 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		35B410FF2499A97000A37614 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		35B411012499AD8B00A37614 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		35B5EC43240866E600F1200C /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		35B5EC452408763000F1200C /* ToolbarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarExtension.swift; sourceTree = "<group>"; };
 		35EF55962360BDFB00649AE2 /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,12 +58,14 @@
 		35EF55A52360BDFD00649AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35EF55B12360D13000649AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Chris/Storyboard/Base.lproj/Scoreboard.storyboard; sourceTree = "<group>"; };
 		35EF55B32360D14300649AE2 /* GameBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameBoard.storyboard; sourceTree = "<group>"; };
-		35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		35EF55B72360D24800649AE2 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewController.swift; sourceTree = "<group>"; };
 		35EF55BD2360D33D00649AE2 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		35EF55BF2360DD2200649AE2 /* TicTacToeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeButton.swift; sourceTree = "<group>"; };
 		35EF55C12360EAA700649AE2 /* ScoreBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardTableViewCell.swift; sourceTree = "<group>"; };
+		4B2D46DD07E92A5F7D231870 /* Pods-Chris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chris.debug.xcconfig"; path = "Target Support Files/Pods-Chris/Pods-Chris.debug.xcconfig"; sourceTree = "<group>"; };
+		61A471F09468551481B95150 /* Pods-Chris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chris.release.xcconfig"; path = "Target Support Files/Pods-Chris/Pods-Chris.release.xcconfig"; sourceTree = "<group>"; };
+		D0B80FFFD567CA5D5BF1C9C0 /* Pods_Chris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F710AA24AFC26EB29B8A0FD /* Pods_Chris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +85,8 @@
 			children = (
 				35EF55982360BDFB00649AE2 /* Chris */,
 				35EF55972360BDFB00649AE2 /* Products */,
+				543D1E9AE44BF20594A9A370 /* Pods */,
+				A229A686228FAF05FEC10F38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				35EF55992360BDFB00649AE2 /* AppDelegate.swift */,
+				35B01885249D69B90096E6FC /* Constants.swift */,
 				35EF55A02360BDFD00649AE2 /* Assets.xcassets */,
+				352FA5642480658600D9F5EC /* WinningCombos.xcassets */,
 				35EF55A22360BDFD00649AE2 /* LaunchScreen.storyboard */,
 				35EF55A52360BDFD00649AE2 /* Info.plist */,
+				35B411012499AD8B00A37614 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -108,6 +132,7 @@
 				35EF559D2360BDFB00649AE2 /* Main.storyboard */,
 				35EF55B32360D14300649AE2 /* GameBoard.storyboard */,
 				35EF55B02360D13000649AE2 /* Scoreboard.storyboard */,
+				3533337E24996E7600C2C524 /* Settings.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -133,9 +158,11 @@
 		35EF55AF2360BE4700649AE2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				35EF55B52360D21100649AE2 /* HomeScreenViewController.swift */,
+				35333380249973DC00C2C524 /* MainMenuViewController.swift */,
 				35EF55B72360D24800649AE2 /* GameBoardViewController.swift */,
 				35EF55B92360D29E00649AE2 /* ScoreboardTableViewController.swift */,
+				35B410FD24998F9800A37614 /* SettingsTableViewController.swift */,
+				35B01883249AE5400096E6FC /* PrivacyPolicyViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -155,8 +182,26 @@
 				35EF55BD2360D33D00649AE2 /* DateExtension.swift */,
 				35B5EC452408763000F1200C /* ToolbarExtension.swift */,
 				35B5EC43240866E600F1200C /* UIDeviceExtension.swift */,
+				35B410FF2499A97000A37614 /* UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		543D1E9AE44BF20594A9A370 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B2D46DD07E92A5F7D231870 /* Pods-Chris.debug.xcconfig */,
+				61A471F09468551481B95150 /* Pods-Chris.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A229A686228FAF05FEC10F38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0B80FFFD567CA5D5BF1C9C0 /* Pods_Chris.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35EF55A82360BDFD00649AE2 /* Build configuration list for PBXNativeTarget "Chris" */;
 			buildPhases = (
+				250181C1D470A4A5E1ECB6D7 /* [CP] Check Pods Manifest.lock */,
 				35EF55922360BDFB00649AE2 /* Sources */,
 				35EF55932360BDFB00649AE2 /* Frameworks */,
 				35EF55942360BDFB00649AE2 /* Resources */,
+				1A5DA6878B0C3E972A6E862C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,14 +266,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				35EF55B22360D13000649AE2 /* Scoreboard.storyboard in Resources */,
+				352FA5652480658600D9F5EC /* WinningCombos.xcassets in Resources */,
 				35EF55A42360BDFD00649AE2 /* LaunchScreen.storyboard in Resources */,
 				35EF55A12360BDFD00649AE2 /* Assets.xcassets in Resources */,
 				35EF55B42360D14300649AE2 /* GameBoard.storyboard in Resources */,
+				35B411022499AD8B00A37614 /* Colors.xcassets in Resources */,
 				35EF559F2360BDFB00649AE2 /* Main.storyboard in Resources */,
+				3533337F24996E7600C2C524 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A5DA6878B0C3E972A6E862C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chris/Pods-Chris-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chris/Pods-Chris-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chris/Pods-Chris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		250181C1D470A4A5E1ECB6D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chris-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35EF55922360BDFB00649AE2 /* Sources */ = {
@@ -234,15 +326,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				35B5EC462408763000F1200C /* ToolbarExtension.swift in Sources */,
+				35B01886249D69B90096E6FC /* Constants.swift in Sources */,
 				28CBEFD72360C82E005A8AFC /* ScoreController.swift in Sources */,
 				28CBEFCF2360C5A8005A8AFC /* Player.swift in Sources */,
 				35EF559A2360BDFB00649AE2 /* AppDelegate.swift in Sources */,
+				35333381249973DC00C2C524 /* MainMenuViewController.swift in Sources */,
+				35B01884249AE5400096E6FC /* PrivacyPolicyViewController.swift in Sources */,
+				35B411002499A97000A37614 /* UIColor.swift in Sources */,
 				35EF55BE2360D33D00649AE2 /* DateExtension.swift in Sources */,
 				35EF55BA2360D29E00649AE2 /* ScoreboardTableViewController.swift in Sources */,
-				35EF55B62360D21100649AE2 /* HomeScreenViewController.swift in Sources */,
 				35EF55C22360EAA700649AE2 /* ScoreBoardTableViewCell.swift in Sources */,
 				35EF55B82360D24800649AE2 /* GameBoardViewController.swift in Sources */,
 				28CBEFD32360C7C5005A8AFC /* Score.swift in Sources */,
+				35B410FE24998F9800A37614 /* SettingsTableViewController.swift in Sources */,
 				35B5EC44240866E600F1200C /* UIDeviceExtension.swift in Sources */,
 				35EF55C02360DD2200649AE2 /* TicTacToeButton.swift in Sources */,
 				28CBEFD12360C7AF005A8AFC /* PlayerController.swift in Sources */,
@@ -397,9 +493,11 @@
 		};
 		35EF55A92360BDFD00649AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B2D46DD07E92A5F7D231870 /* Pods-Chris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EANQJ7L949;
 				INFOPLIST_FILE = "$(SRCROOT)/Chris/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -407,6 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.squantoinc.Chris;
 				PRODUCT_NAME = "Tic Tac Toe";
 				SWIFT_VERSION = 5.0;
@@ -416,9 +515,11 @@
 		};
 		35EF55AA2360BDFD00649AE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A471F09468551481B95150 /* Pods-Chris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = EANQJ7L949;
 				INFOPLIST_FILE = "$(SRCROOT)/Chris/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -426,6 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.squantoinc.Chris;
 				PRODUCT_NAME = "Tic Tac Toe";
 				SWIFT_VERSION = 5.0;
