@@ -23,13 +23,12 @@ class PlayerController {
     
     func createFileForPersistence() -> URL {
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        let fileURL = urls[0].appendingPathComponent("nightMode.json")
+        let fileURL = urls[0].appendingPathComponent("TicTacToe-NightMode.json")
         return fileURL
     }
     
     func saveToPersistantStore() {
         let jsonEncoder = JSONEncoder()
-        
         do {
             let jsonNightMode = try jsonEncoder.encode(nightMode)
             try jsonNightMode.write(to: createFileForPersistence())
@@ -40,11 +39,9 @@ class PlayerController {
     
     func loadFromPersistantStorage() {
         let jsonDecoder = JSONDecoder()
-        
         do {
             let jsonData = try Data(contentsOf: createFileForPersistence())
             let decodeNightModeData = try jsonDecoder.decode(Bool.self, from: jsonData)
-            print(decodeNightModeData)
             nightMode = decodeNightModeData
         } catch let decodingError {
             print("Error: Could not retrieve data from storage: \(decodingError.localizedDescription).")
